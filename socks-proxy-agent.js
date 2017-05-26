@@ -122,7 +122,8 @@ function connect (req, opts, fn) {
     target: {
       port: +opts.port
     },
-    command: 'connect'
+    command: 'connect',
+    timeout: proxy.timeout
   };
   if (proxy.authentication) {
     options.proxy.authentication = proxy.authentication;
